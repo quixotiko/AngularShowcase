@@ -1,0 +1,8 @@
+<div class="container">
+    <p></p>
+    <div class="scroll-area" #scrollArea>
+        <div class="box" *ngFor="let item of itemResults$ | async" [ngStyle]="boxStyle">
+            {{item?.index}}
+        </div>
+    </div>
+</div>

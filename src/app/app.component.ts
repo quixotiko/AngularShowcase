@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularShowcase';
+  showcase: string[];
+
+  constructor() {
+    this.showcase = [
+      "AngularShowcase",
+      "infiniteScroll",
+      "mousemoveEffect"
+    ]
+  }
 }
