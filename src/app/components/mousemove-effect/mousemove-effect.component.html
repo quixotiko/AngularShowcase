@@ -1,1 +1,6 @@
-<p>mousemove-effect works!</p>
+<div class="container" #container>
+    <ng-container *ngFor="let item of bubbles">
+        <div class="bubble" *ngIf="item?.isVisible" [ngStyle]="{'left': item?.x + 'px', 'top': item?.y + 'px'}" [style.border-color]="item?.bdColor" @bubbleAnimation>
+        </div>
+    </ng-container>
+</div>
