@@ -1,8 +1,10 @@
 <div class="container">
-    <p></p>
+    <p>滑动加载数据，用RxJs的interval模拟后端数据，每页十个数据</p>
+    <hr>
     <div class="scroll-area" #scrollArea>
-        <div class="box" *ngFor="let item of itemResults$ | async" [ngStyle]="boxStyle">
-            {{item?.index}}
+        <div class="box" *ngFor="let item of itemResults$ | async" [ngStyle]="boxStyle" [style.background-color]="item?.bgColor">
+            <!-- 这里的?.很重要，等待数据时，item为空，视图渲染器会失败报错 -->
+            <div class="content">{{item?.index}}</div>
         </div>
     </div>
 </div>

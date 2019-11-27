@@ -18,12 +18,13 @@ export class InfiniteScrollComponent implements OnInit {
   scrollArea: HTMLDivElement;
   cache: any = [];
   itemHeight: number = 100;
+  itemWidth: number;
   numberOfItems: number = 10;
   loading: boolean = false;
 
   boxStyle = {
-    'height': this.itemHeight + 'px'
-
+    'height': this.itemHeight + 'px',
+    'width': this.itemHeight + 'px'
   }
 
   pageByManual$: Subject<number> = new BehaviorSubject<number>(1);
@@ -39,7 +40,7 @@ export class InfiniteScrollComponent implements OnInit {
     distinct(),
     debounceTime(200),
     map((y) => {
-      return Math.ceil((y + window.innerHeight) / (this.itemHeight * this.numberOfItems) + 1)
+      return Math.ceil((y + window.innerHeight) / (this.itemHeight * this.numberOfItems))
       
     })
   );
@@ -65,7 +66,10 @@ export class InfiniteScrollComponent implements OnInit {
     flatMap((page) => {
       return range((page-1)*10+1,10).pipe(//range第二个参数是个数
         map((n) => {
-          return {index: n}
+          return {
+            index: n,
+            bgColor: 'rgb(' + Math.random()* 255 + ',' + Math.random()* 255 + ',' + Math.random()* 255  + ')'
+          }
         }),
         toArray(),
         delay(1000),
