@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { InfiniteScrollComponent } from './components/infinite-scroll/infinite-scroll.component';
 import { MousemoveEffectComponent } from './components/mousemove-effect/mousemove-effect.component';
 import { HomeComponent } from './components/home/home.component';
+import { PrinterComponent } from './components/printer/printer.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'mousemoveEffect',
     component: MousemoveEffectComponent
+  },
+  {
+    path: 'printer',
+    component: PrinterComponent
   },
   {
     path: '',

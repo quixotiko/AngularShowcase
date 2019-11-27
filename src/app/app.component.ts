@@ -13,7 +13,8 @@ export class AppComponent {
     this.showcase = [
       "AngularShowcase",
       "infiniteScroll",
-      "mousemoveEffect"
+      "mousemoveEffect",
+      "printer"
     ]
   }
 }

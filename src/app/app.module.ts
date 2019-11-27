@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { InfiniteScrollComponent } from './components/infinite-scroll/infinite-scroll.component';
 import { MousemoveEffectComponent } from './components/mousemove-effect/mousemove-effect.component';
 import { HomeComponent } from './components/home/home.component';
+import { PrinterComponent } from './components/printer/printer.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
     InfiniteScrollComponent,
     MousemoveEffectComponent,
     HomeComponent,
+    PrinterComponent,
   ],
   imports: [
     BrowserModule,
