@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="button" #button (click)="handleClick($event)">
+        <!-- angular的原生事件必须传入 $event-->
+        <span>
+            Click ME!
+        </span>
+        <div class="ripple" [ngStyle]="rippleStyle" [@rippleAnimation]="isActive? 'activated' : 'inactive'"
+            (@rippleAnimation.done)="onAnimationEnd($event)" #ripple></div>
+    </div>
+</div>

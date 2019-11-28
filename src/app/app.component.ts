@@ -14,7 +14,8 @@ export class AppComponent {
       "AngularShowcase",
       "infiniteScroll",
       "mousemoveEffect",
-      "printer"
+      "printer",
+      "ripple"
     ]
   }
 }

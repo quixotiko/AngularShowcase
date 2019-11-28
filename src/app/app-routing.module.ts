@@ -4,6 +4,7 @@ import { InfiniteScrollComponent } from './components/infinite-scroll/infinite-s
 import { MousemoveEffectComponent } from './components/mousemove-effect/mousemove-effect.component';
 import { HomeComponent } from './components/home/home.component';
 import { PrinterComponent } from './components/printer/printer.component';
+import { RippleComponent } from './components/ripple/ripple.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'printer',
     component: PrinterComponent
+  },
+  {
+    path: 'ripple',
+    component: RippleComponent
   },
   {
     path: '',
